@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
+
     public static String readProperty(String key){
 
         //File class assign given file to the java object

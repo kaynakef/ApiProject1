@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class )
 @CucumberOptions(
         features ="src/main/resources/features",
-        glue={"test/stepdefinitions", "test/hook"},
-        dryRun = true,
+        glue={"test/stepdefinitions"},
+        dryRun = false,
         tags = "",
         plugin = {"pretty", "html:target/uiReport.html", "rerun:target/uiFailedTests.txt",
                 "json:target/cucumber-reports/cucumber.json"}
