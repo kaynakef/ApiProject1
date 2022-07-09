@@ -43,7 +43,7 @@ Response response;
 
         String body1 = bodyAsString.replace(":","=").replace("\"","").replace(",",", ");
 
-        Assert.assertEquals(body1.contains(parsedResponse.getData().toString()),true);
+        Assert.assertTrue(body1.contains(parsedResponse.getData().toString()));
 
 //
 
