@@ -9,7 +9,7 @@ import lombok.Setter;
 public class UsersPojo {
 
     private int code;
-    private String meta;
+    private Object meta;
     private Object data;
 
 

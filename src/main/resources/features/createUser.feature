@@ -1,22 +1,36 @@
 Feature: Testing the create user functionality
 
+  Background:
+    Given Users api endpoint set
+
   Scenario: Validating the successful user creation
 
-    Given User get request with correct authorization
-    When User pass request body
+    And User sets request header and authorization
+    When User sets request body, sends a Post HTTP request and validates the status
+      | name   | test   |
+      | gender | female |
+      | status | active |
     Then User validates the response body
+      | expectedName   | test   |
+      | expectedGender | female |
+      | expectedStatus | active |
 
 
   Scenario Outline: Validating the negative test for creating user.
 
-    Given User get request with authorization '<token>'
-    When User pass wrong request body '<name>', '<gender>', '<email>', '<status>'
-    Then user validates the response body error
+    And User sets request header with authorization '<token>'
+    When User sets request body '<name>', '<gender>', '<email>', '<status>' , sends a Post HTTP request and validates the status
+    Then user validates the response body error '<token>', '<error>'
 
     Examples:
-      | token                                                                   | name | gender | email             | status   |
-      | 123123123                                                               | test | gender | email@gmail.com   | inactive |
-      | Bearer 106b8f21995c73c87f315a314df2a751097151c10820b7bf28bed937c94a191f | Nana | male   | gmail.gmail.com   | active   |
-      | slakdjfkljasdfksdf865f64s5df634a3s5d43543543ds5a4f3545sd4f354asd5f      | Nana | male   | gmajkfd@gmail.com | Inactive |
+      | token                 | name   | gender | email             | status   | error                                  |
+      | 123123                | test   | female | email@gmail.com   | inactive | Authentication failed                  |
+      | Correct Authorization | test   | male   | gmail.gmail.com   | active   | is invalid                             |
+      | Correct Authorization | test   | gender | gmajkfd@gmail.com | Inactive | can\'t be blank, can be male or female |
+      | Correct Authorization |        | male   | email@gmail.com   | active   | can\'t be blank                        |
+      | Correct Authorization | test   | female |                   | active   | can\'t be blank                        |
+      | Correct Authorization | test   | male   | email@gmail.com   |          | can\'t be blank                        |
+      | Correct Authorization | 234-0o | female | email@gmail.com   | inactive | has already been taken                 |
+      | Correct Authorization | test   | male   | em  ail@gmail.com | active   | is invalid                             |
 
 
