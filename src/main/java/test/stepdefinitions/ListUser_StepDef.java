@@ -7,6 +7,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
+import org.junit.Test;
 import test.pojo.UsersPojo;
 import java.util.List;
 import java.util.Map;
@@ -33,5 +34,15 @@ public class ListUser_StepDef {
 
     }
 
+
+    @Test
+    public void Test(){
+        System.out.println("hello");
+        System.out.println("hello");
+        System.out.println("hello");
+        System.out.println("hello");
+        System.out.println("hello");
+        System.out.println("hello");
+    }
 
 }
