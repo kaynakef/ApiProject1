@@ -35,16 +35,6 @@ public class ListUser_StepDef {
     }
 
 
-    @Test
-    public void Test(){
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-    }
+
 
 }
