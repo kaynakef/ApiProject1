@@ -41,7 +41,9 @@ public class DeleteUser_StepDef {
     @When("User sets user id and sends a Delete HTTP request and validates the status")
     public void user_sets_user_id_and_sends_a_delete_http_request_and_validates_the_status() {
         response = requestSpecification
+
                 .when().delete(String.valueOf(userId)).then().statusCode(200).extract().response();
+
 
     }
     @Then("User sends a Get HTTP request with ID and validates the status")
@@ -67,7 +69,9 @@ public class DeleteUser_StepDef {
     @When("User sets non-exist userID {int} and sends a Delete Http request and validates the status")
     public void user_sets_non_exist_user_id_and_sends_a_delete_http_request_and_validates_the_status(int userId) {
         response = requestSpecification
+
                 .when().delete(String.valueOf(userId)).then().statusCode(200).extract().response();
+
 
     }
     @Then("User sets request header without authorization for delete")

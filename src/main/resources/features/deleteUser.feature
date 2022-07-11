@@ -21,7 +21,9 @@ Feature: Testing the delete User functionality
     Scenario: Validating negative test for user deleting
 
       And User sets request header and authorization for delete
+
       When User sets non-exist userID 4108 and sends a Delete Http request and validates the status
+
 #    if there was a real user, response should be 204 and null
 #        since this is negative testing it can not find the user
       Then User validates the response body 404 and "Resource not found"

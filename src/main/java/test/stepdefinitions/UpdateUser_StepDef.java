@@ -43,7 +43,9 @@ public class UpdateUser_StepDef {
         Map<String,String> requestBodyCredentials=dataTable.asMap();
         response = requestSpecification
                 .body(PayloadUtils.getCreateUserPayload(requestBodyCredentials.get("Name"), requestBodyCredentials.get("Gender"), PayloadUtils.createEmail(), requestBodyCredentials.get("Status")))
+
                 .when().put(String.valueOf(userID)).then().statusCode(200).extract().response();
+
 
     }
     @Then("User validates the response body for the updated user")
@@ -78,7 +80,9 @@ public class UpdateUser_StepDef {
         Map<String,String> requestBodyCredentials=dataTable.asMap();
         response = requestSpecification
                 .body(PayloadUtils.getCreateUserPayload(requestBodyCredentials.get("Name"), requestBodyCredentials.get("Gender"), PayloadUtils.createEmail(), requestBodyCredentials.get("Status")))
+
                 .when().put(String.valueOf(userID)).then().statusCode(200).extract().response();
+
 
 
     }
