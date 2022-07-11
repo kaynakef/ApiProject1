@@ -13,6 +13,13 @@ public class PayloadUtils {
                 "}";
     }
 
+    public static String getCreatePostPayload(String title, String body){
+        return "{\n" +
+                "    \"title\":\""+title+"\",\n" +
+                "    \"body\" : \""+body+"\"\n" +
+                "}";
+    }
+
     //here is a create email method that we can use,
     // because every time we need a unique email to be able to successfully create a user.
 

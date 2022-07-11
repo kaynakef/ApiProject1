@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1) - Feature: Testing the delete User functionality</title>
+<title>Cucumber Reports (no 1) - Feature: Testing to post user functionality</title>
 
 </head>
 <body>
@@ -128,19 +128,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">Testing the delete User functionality</td>
-          <td      class="passed"    >20</td>
+          <td class="tagname">Testing to post user functionality</td>
+          <td      class="passed"    >17</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">20</td>
+          <td class="total">17</td>
 
-          <td  class="passed"    >3</td>
+          <td  class="passed"    >4</td>
           <td >0</td>
-          <td class="total">3</td>
+          <td class="total">4</td>
 
-          <td class="duration" data-value="3814000000">3.814</td>
+          <td class="duration" data-value="2961000000">2.961</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -175,7 +175,7 @@ $(document).ready(function() {
 
 <div class="brief passed">
   <span class="keyword indention">Feature</span>
-  <span class="name">Testing the delete User functionality</span>
+  <span class="name">Testing to post user functionality</span>
 
 
 </div>
@@ -232,7 +232,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">Users api endpoint set</span>
+  <span class="name">Post api endpoint set</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -272,14 +272,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.603</span>
+  <span class="lead-duration duration">1.689</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Validating the successful user deleting</span>
+  <span class="name">Validating successful user post creation</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -313,9 +313,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User sets request header and authorization for delete</span>
+  <span class="name">User sets request header and authorization for post</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.003</span>
 
 </div>
 
@@ -340,9 +340,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">User sets request body, sends a Post HTTP request and validates the status for delete</span>
+  <span class="name">User sets request body, sends a Post HTTP request for new User</span>
 
-  <span class="lead-duration duration">0.362</span>
+  <span class="lead-duration duration">1.288</span>
 
 </div>
 
@@ -354,16 +354,53 @@ $(document).ready(function() {
 
           <table class="step-arguments">
               <tr>
-                  <td>Name</td>
+                  <td>name</td>
                   <td>test</td>
               </tr>
               <tr>
-                  <td>Gender</td>
-                  <td>female</td>
+                  <td>gender</td>
+                  <td>male</td>
               </tr>
               <tr>
-                  <td>Status</td>
+                  <td>status</td>
                   <td>active</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User sends a post request to update the new user</span>
+
+  <span class="lead-duration duration">0.356</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>title</td>
+                  <td>test for title</td>
+              </tr>
+              <tr>
+                  <td>body</td>
+                  <td>test for body</td>
               </tr>
           </table>
 
@@ -381,36 +418,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">User gets the user id from the response body</span>
+  <span class="name">User validates the response body for post request</span>
 
-  <span class="lead-duration duration">0.003</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">User sets user id and sends a Delete HTTP request and validates the status</span>
-
-  <span class="lead-duration duration">0.479</span>
+  <span class="lead-duration duration">0.042</span>
 
 </div>
 
@@ -420,114 +430,16 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">User validates the response body <span class="argument">204</span> and <span class="argument">&quot;null&quot;</span></span>
-
-  <span class="lead-duration duration">0.004</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">User sets request header</span>
-
-  <span class="lead-duration duration">0.001</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">User sends a Get HTTP request with ID and validates the status</span>
-
-  <span class="lead-duration duration">0.749</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">User validates the response body <span class="argument">404</span> and <span class="argument">&quot;Resource not found&quot;</span></span>
-
-  <span class="lead-duration duration">0.003</span>
-
-</div>
-
-
-
-
-
-
-
+          <table class="step-arguments">
+              <tr>
+                  <td>expectedTitle</td>
+                  <td>test for title</td>
+              </tr>
+              <tr>
+                  <td>expectedBody</td>
+                  <td>test for body</td>
+              </tr>
+          </table>
 
 
 
@@ -556,7 +468,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
@@ -597,9 +509,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">Users api endpoint set</span>
+  <span class="name">Post api endpoint set</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -637,14 +549,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.897</span>
+  <span class="lead-duration duration">0.459</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
 
 <div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Validating negative test for user deleting</span>
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Validating negative test for creating a new post</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -678,7 +590,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User sets request header and authorization for delete</span>
+  <span class="name">User sets request header and authorization <span class="argument">'Correct Authorization'</span></span>
 
   <span class="lead-duration duration">0.002</span>
 
@@ -705,9 +617,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">User sets non-exist userID <span class="argument">4001</span> and sends a Delete Http request and validates the status</span>
+  <span class="name">User sets request body <span class="argument">''</span> and <span class="argument">'test for body'</span>, and sends a post HTTP request and validates the status</span>
 
-  <span class="lead-duration duration">0.893</span>
+  <span class="lead-duration duration">0.394</span>
 
 </div>
 
@@ -732,9 +644,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">User validates the response body <span class="argument">404</span> and <span class="argument">&quot;Resource not found&quot;</span></span>
+  <span class="name">User validates the response body <span class="argument">'Correct Authorization'</span>, <span class="argument">'can\'t be blank'</span> message from HTTP post</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.063</span>
 
 </div>
 
@@ -813,7 +725,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">Users api endpoint set</span>
+  <span class="name">Post api endpoint set</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -853,14 +765,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.314</span>
+  <span class="lead-duration duration">0.445</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-11">
 
 <div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Validating negative test for user deleting without authorization</span>
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Validating negative test for creating a new post</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -894,7 +806,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User sets request header and authorization for delete</span>
+  <span class="name">User sets request header and authorization <span class="argument">'Correct Authorization'</span></span>
 
   <span class="lead-duration duration">0.002</span>
 
@@ -921,50 +833,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">User sets request body, sends a Post HTTP request and validates the status for delete</span>
+  <span class="name">User sets request body <span class="argument">'test for title'</span> and <span class="argument">''</span>, and sends a post HTTP request and validates the status</span>
 
-  <span class="lead-duration duration">0.496</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>Name</td>
-                  <td>test</td>
-              </tr>
-              <tr>
-                  <td>Gender</td>
-                  <td>female</td>
-              </tr>
-              <tr>
-                  <td>Status</td>
-                  <td>active</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">User gets the user id from the response body</span>
-
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.424</span>
 
 </div>
 
@@ -989,7 +860,88 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">User sets request header without authorization for delete</span>
+  <span class="name">User validates the response body <span class="argument">'Correct Authorization'</span>, <span class="argument">'can\'t be blank'</span> message from HTTP post</span>
+
+  <span class="lead-duration duration">0.019</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.001</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Post api endpoint set</span>
 
   <span class="lead-duration duration">0.001</span>
 
@@ -1011,14 +963,95 @@ $(document).ready(function() {
 
 
       </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.366</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-15">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Validating negative test for creating a new post</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-15" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-16">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-16" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User sets request header and authorization <span class="argument">'Incorrect'</span></span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
       <div class="step">
 
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">User sets user id and sends a Delete HTTP request and validates the status</span>
+  <span class="name">User sets request body <span class="argument">'test for title'</span> and <span class="argument">'test for body'</span>, and sends a post HTTP request and validates the status</span>
 
-  <span class="lead-duration duration">0.810</span>
+  <span class="lead-duration duration">0.328</span>
 
 </div>
 
@@ -1043,9 +1076,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">User validates the response body <span class="argument">404</span> and <span class="argument">&quot;Resource not found&quot;</span></span>
+  <span class="name">User validates the response body <span class="argument">'Incorrect'</span>, <span class="argument">'Authentication failed'</span> message from HTTP post</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.034</span>
 
 </div>
 
