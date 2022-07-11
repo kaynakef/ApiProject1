@@ -10,6 +10,6 @@ import java.util.Map;
 public class PostsPojo {
     private int code;
     private String meta;
-    private Map<String, Object> data;
+    private Object data;
 
 }
