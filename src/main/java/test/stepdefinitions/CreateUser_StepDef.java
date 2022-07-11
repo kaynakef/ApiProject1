@@ -22,8 +22,8 @@ Response response;
 
     @Given("Users api endpoint set")
     public void users_api_endpoint_set() {
-        RestAssured.baseURI="https://gorest.co.in/public-api";
-        RestAssured.basePath="users";
+        RestAssured.baseURI=ConfigReader.readProperty("baseURI");
+        RestAssured.basePath=ConfigReader.readProperty("usersPath");
     }
     @Given("User sets request header and authorization")
     public void user_sets_request_header_and_authorization() {

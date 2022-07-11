@@ -8,9 +8,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 import test.pojo.UsersPojo;
-import test.utils.ConfigReader;
-import test.utils.PayloadUtils;
-
 import java.util.List;
 import java.util.Map;
 

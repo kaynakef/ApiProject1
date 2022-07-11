@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>OpenMRS-Cucumber-Report</td>
+        <td>1</td>
+      <td>10 Jul 2022, 22:21</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">test.stepdefinitions.CreateUser_StepDef.user_sets_request_body_sends_a_post_http_request_and_validates_the_status(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2117000000">2.117</td>
+              <td class="duration" data-value="2117000000">2.117</td>
+              <td class="duration" data-value="2117000000">2.117</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.CreateUser_StepDef.user_sets_request_body_sends_a_post_http_request_and_validates_the_status(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="786000000">0.786</td>
+              <td class="duration" data-value="786000000">0.997</td>
+              <td class="duration" data-value="6288000000">6.288</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.CreateUser_StepDef.user_sets_request_header_and_authorization()</td>
+              <td>1</td>
+              <td class="duration" data-value="297000000">0.297</td>
+              <td class="duration" data-value="297000000">0.297</td>
+              <td class="duration" data-value="297000000">0.297</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.CreateUser_StepDef.user_sets_request_header_with_authorization(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="2750000">0.002</td>
+              <td class="duration" data-value="2750000">0.005</td>
+              <td class="duration" data-value="22000000">0.022</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.CreateUser_StepDef.user_validates_the_response_body(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="704000000">0.704</td>
+              <td class="duration" data-value="704000000">0.704</td>
+              <td class="duration" data-value="704000000">0.704</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.CreateUser_StepDef.user_validates_the_response_body_error(java.lang.String,java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="2750000">0.002</td>
+              <td class="duration" data-value="2750000">0.003</td>
+              <td class="duration" data-value="22000000">0.022</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.CreateUser_StepDef.users_api_endpoint_set()</td>
+              <td>16</td>
+              <td class="duration" data-value="55312500">0.055</td>
+              <td class="duration" data-value="55312500">0.878</td>
+              <td class="duration" data-value="885000000">0.885</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.DeleteUser_StepDef.user_gets_the_user_id_from_the_response_body()</td>
+              <td>2</td>
+              <td class="duration" data-value="3000000">0.003</td>
+              <td class="duration" data-value="3000000">0.003</td>
+              <td class="duration" data-value="6000000">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.DeleteUser_StepDef.user_sends_a_get_http_request_with_id_and_validates_the_status()</td>
+              <td>1</td>
+              <td class="duration" data-value="408000000">0.408</td>
+              <td class="duration" data-value="408000000">0.408</td>
+              <td class="duration" data-value="408000000">0.408</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.DeleteUser_StepDef.user_sets_non_exist_user_id_and_sends_a_delete_http_request_and_validates_the_status(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="949000000">0.949</td>
+              <td class="duration" data-value="949000000">0.949</td>
+              <td class="duration" data-value="949000000">0.949</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.DeleteUser_StepDef.user_sets_request_body_sends_a_post_http_request_and_validates_the_status_for_delete(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="440000000">0.440</td>
+              <td class="duration" data-value="440000000">0.481</td>
+              <td class="duration" data-value="880000000">0.880</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.DeleteUser_StepDef.user_sets_request_header_and_authorization_for_delete()</td>
+              <td>3</td>
+              <td class="duration" data-value="5000000">0.005</td>
+              <td class="duration" data-value="5000000">0.006</td>
+              <td class="duration" data-value="15000000">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.DeleteUser_StepDef.user_sets_request_header_without_authorization_for_delete()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.DeleteUser_StepDef.user_sets_user_id_and_sends_a_delete_http_request_and_validates_the_status()</td>
+              <td>2</td>
+              <td class="duration" data-value="745500000">0.745</td>
+              <td class="duration" data-value="745500000">1.018</td>
+              <td class="duration" data-value="1491000000">1.491</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.DeleteUser_StepDef.user_validates_the_response_body_and(int,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="30250000">0.030</td>
+              <td class="duration" data-value="30250000">0.112</td>
+              <td class="duration" data-value="121000000">0.121</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.ListUser_StepDef.user_sends_a_get_http_request_and_validates_the_status()</td>
+              <td>1</td>
+              <td class="duration" data-value="1010000000">1.010</td>
+              <td class="duration" data-value="1010000000">1.010</td>
+              <td class="duration" data-value="1010000000">1.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.ListUser_StepDef.user_sets_request_header()</td>
+              <td>2</td>
+              <td class="duration" data-value="500000">0.000</td>
+              <td class="duration" data-value="500000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.ListUser_StepDef.user_validates_the_list_user_response_body()</td>
+              <td>1</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.UpdateUser_StepDef.user_gets_the_user_id_from_the_response_body_for_update()</td>
+              <td>2</td>
+              <td class="duration" data-value="3000000">0.003</td>
+              <td class="duration" data-value="3000000">0.003</td>
+              <td class="duration" data-value="6000000">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.UpdateUser_StepDef.user_sets_request_body_sends_a_post_http_request_and_validates_the_status_for_update(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="1109000000">1.109</td>
+              <td class="duration" data-value="1109000000">1.249</td>
+              <td class="duration" data-value="2218000000">2.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.UpdateUser_StepDef.user_sets_request_header_and_authorization_for_update()</td>
+              <td>3</td>
+              <td class="duration" data-value="3666666">0.003</td>
+              <td class="duration" data-value="3666666">0.006</td>
+              <td class="duration" data-value="11000000">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.UpdateUser_StepDef.user_sets_request_header_without_authorization_for_update()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.UpdateUser_StepDef.user_sets_user_id_sets_request_body_sends_a_put_http_request_and_validates_the_status(io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="989000000">0.989</td>
+              <td class="duration" data-value="989000000">1.481</td>
+              <td class="duration" data-value="1978000000">1.978</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.UpdateUser_StepDef.user_sets_user_id_sets_request_body_sends_a_put_http_request_and_validates_the_status(java.lang.Integer,io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="487000000">0.487</td>
+              <td class="duration" data-value="487000000">0.487</td>
+              <td class="duration" data-value="487000000">0.487</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.UpdateUser_StepDef.user_validates_the_response_body_for_the_updated_user(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2000000">0.002</td>
+              <td class="duration" data-value="2000000">0.002</td>
+              <td class="duration" data-value="2000000">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">test.stepdefinitions.UpdateUser_StepDef.user_validates_the_response_body_with_error(int)</td>
+              <td>2</td>
+              <td class="duration" data-value="2500000">0.002</td>
+              <td class="duration" data-value="2500000">0.003</td>
+              <td class="duration" data-value="5000000">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>26</td>
+            <td>77</td>
+            <td class="duration">0.258</td>
+            <td class="duration">6.288</td>
+            <td class="duration">19.932</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
