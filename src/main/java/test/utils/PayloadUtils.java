@@ -19,6 +19,15 @@ public class PayloadUtils {
                 "    \"body\" : \""+body+"\"\n" +
                 "}";
     }
+
+    public static String getCreateCommentPayload(String id,String name,String email,String bodyMsg){
+        return "{\n" +
+                "    \"post_id\": \""+id+"\",\n" +
+                "    \"name\": \""+name+"\",\n" +
+                "    \"email\": \""+email+"\",\n" +
+                "    \"body\": \""+bodyMsg+"\"\n" +
+                "}";
+    }
     //here is a create email method that we can use,
     // because every time we need a unique email to be able to successfully create a user.
 
