@@ -24,4 +24,5 @@ Feature: Testing to post user functionality
       | token                 | title          | body          | errorMsg              |
       | Correct Authorization |                | test for body | can\'t be blank       |
       | Correct Authorization | test for title |               | can\'t be blank       |
+      | Correct Authorization |                |               | can\'t be blank       |
       | Incorrect             | test for title | test for body | Authentication failed |
